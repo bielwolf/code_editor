@@ -2,46 +2,48 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     background-color: #0B1B2B;
 }
 
-header {
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    top: 32px;
-    left: 32px;
-    padding: 32px;
-    width: 100%;
-}
-
 .cabecalho {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    max-width: 1440px;
     width: 100%;
-    max-width: 1376px;
     height: 56px;
-    padding: 32px;
+    top: 32px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.logo {
+    flex-shrink: 0;
 }
 
 .text_field {
     display: flex;
     flex-grow: 1;
     justify-content: center;
+    padding: 0 56px;
 }
 
-#base {
+
+.base {
     display: flex;
-    flex-direction: column;
-    width: 752px;
-    position: relative;
+    max-width: 752px;
+    width: 100%;
 }
 
-#input {
+.input {
     display: flex;
     border-radius: 8px;
     width: 100%;
@@ -54,9 +56,80 @@ header {
     background-color: #2d415b;
     outline: none;
     color: #ffffff;
+    opacity: 0.5;
+
 }
 
-#input::placeholder {
+.input::placeholder {
     color: #ffffff;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border-radius: 8px;
+    gap: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 12px;
+}
+
+.photo-author {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.name-author {
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+.container-aside {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 88px;
+    max-width: 260px;
+    width: 100%;
+    height: calc(100vh - 88px);
+    margin-left: 32px;
+}
+
+.container-aside aside {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.container-aside h2 {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 40%;
+}
+
+.nav-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.nav-aside a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: #FFFFFF;
     opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.nav-aside a:hover {
+    opacity: 1;
+    color: #FFFFFF;
 }
