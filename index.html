@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles/styles.css">
     <title>Alura Dev</title>
 </head>
+
 <body>
     <header class="cabecalho">
-        <div class="logo">
-            <img src="/src/images/Logo.svg" alt="Logo Alura Dev">
-        </div>
-        <div class="text_field">
-            <form action="" class="base">
-                <input type="text" placeholder="Busque por algo" class="input">
-            </form>
-        </div>
+        <img src="/src/images/Logo.svg" alt="Logo Alura Dev" class="logo">
+        <form action="" class="base">
+            <input type="text" placeholder="Busque por algo" class="search-form">
+        </form>
         <div class="author">
             <img src="/src/images/Photo.svg" alt="Foto do usuário" class="photo-author">
             <p class="name-author">Harry</p>
         </div>
     </header>
-    <div class="container-aside">
-        <aside>
-            <h2>Menu</h2>
+    <div class="container">
+        <aside class="aside-menu">
+            <h2 class="nav-title">Menu</h2>
             <nav class="nav-aside">
                 <a href=""><img src="src/images/Icon.svg" alt="">Editor de código</a>
                 <a href=""><img src="src/images/Icon-comunity.png" alt="">Comunidade</a>
             </nav>
         </aside>
+        <main class="editor"></main>
+        <aside class="sidebar-project">
+            <form action="" class="project-form">
+                <section class="form-group">
+                    <h3 class="section-title">Seu Projeto</h3>
+                    <input type="text" placeholder="Nome do projeto" class="input-field">
+                    <textarea name="" class="textarea-field" placeholder="Descrição do Projeto"></textarea>
+                </section>
+                <section class="form-group">
+                    <h3 class="section-title">Personliazação</h3>
+                    <select name="" class="select-field">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="javascript">JavaScript</option>
+
+                    </select>
+                    <input type="color" class="color-picker">
+                </section>
+                <button type="submit" class="button-save">Salvar o projeto</button>
+            </form>
+        </aside>
     </div>
 </body>
+
 </html>
